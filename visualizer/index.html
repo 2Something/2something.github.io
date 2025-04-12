@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/Website/">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Audio Visualizer | SomethingDev</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/visualizer/index.js"></script>
+    <style>
+        #audio {
+            height: 80px;
+            width: 80px;
+            background-color: white;
+        }
+        #visualizer {
+            position: absolute;
+            top:0;
+            left:0;
+            padding: 0;
+            margin:0;
+            background-color: white;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0;
+            background-color: white;
+            padding: 0;
+        }
+        #start {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body onload="ready()">
+    <audio id="audio" src="/visualizer/yummers.mp3"></audio>
+    <button id="start" onclick="$('#audio')[0].play()">Start</button>
+    <canvas id="visualizer"></canvas>
+</body>
+</html>
